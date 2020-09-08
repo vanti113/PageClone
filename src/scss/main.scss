@@ -1,0 +1,33 @@
+main {
+  background-color: $main_color;
+  width: 53vw;
+  height: 300vh;
+  margin-left: 47vw;
+  .movie_box {
+    width: 100%;
+    height: 85vh;
+    background-color: green;
+    background: linear-gradient(#d64237, $main_color);
+    padding: 80px 75px;
+    .movie_box_title {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .movie_left {
+        font-size: 22px;
+        font-weight: 800;
+        color: white;
+        font-family: "Syncopate", sans-serif;
+        text-transform: uppercase;
+      }
+      .movie_right {
+        font-size: 15px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+  }
+}

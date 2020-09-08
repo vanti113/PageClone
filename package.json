@@ -6,6 +6,11 @@
   "author": "Bae Kigun",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp build",
+    "deploy": "gulp deploy"
+  },
   "dependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
