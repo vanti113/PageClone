@@ -68,7 +68,7 @@ const watch = () => {
   gulp.watch(routes.js.watch, js);
 };
 
-const upload = () => gulp.src("build").pipe(ghPages());
+const upload = () => gulp.src("build/**/*").pipe(ghPages());
 
 const clean = () => del("build");
 
