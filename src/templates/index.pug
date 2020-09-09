@@ -2,4 +2,8 @@ extends ./layouts/layout
 block content
   include ./partials/header.pug
   include ./partials/main.pug
-   
+  main
+    - var n = 0;
+    while n < 6
+      +movies
+      - n++

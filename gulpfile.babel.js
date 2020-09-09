@@ -8,6 +8,7 @@ import bro from "gulp-bro";
 import babelify from "babelify";
 import ws from "gulp-webserver";
 import ghPages from "gulp-gh-pages";
+import image from "gulp-image";
 
 gulpSass.compiler = require("node-sass");
 
@@ -26,6 +27,10 @@ const routes = {
     src: "src/js/**/main.js",
     dest: "build/js",
     watch: "src/js/**/*.js",
+  },
+  image: {
+    src: "src/images/**/*",
+    dest: "build/image",
   },
 };
 
@@ -54,6 +59,9 @@ const js = () =>
     )
     .pipe(gulp.dest(routes.js.dest));
 
+const img = () =>
+  gulp.src(routes.image.src).pipe(image()).pipe(gulp.dest(routes.image.dest));
+
 const web = () =>
   gulp.src("build").pipe(
     ws({
@@ -72,7 +80,7 @@ const upload = () => gulp.src("build/**/*").pipe(ghPages());
 
 const clean = () => del("build");
 
-const assets = gulp.series([pug, scss, js]);
+const assets = gulp.series([pug, scss, js, img]);
 
 export const build = gulp.series([clean, assets]);
 export const dev = gulp.series([web, watch]);

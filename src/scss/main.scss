@@ -7,8 +7,9 @@ main {
     width: 100%;
     height: 85vh;
     background-color: green;
-    background: linear-gradient(#d64237, $main_color);
+    background: linear-gradient(#d64237, $main_color, $main_color);
     padding: 80px 75px;
+    display: block;
     .movie_box_title {
       width: 100%;
       display: flex;
@@ -27,6 +28,34 @@ main {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+      }
+    }
+    .movie_image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        margin-top: 15px;
+        width: 100%;
+        box-shadow: 0px 110px 90px -100px;
+      }
+    }
+    .movie_prefer {
+      margin-top: 23px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      opacity: 0.7;
+      color: $header_bg_color;
+      i {
+        font-size: 20px;
+        margin: 0px 5px;
+      }
+      .prefer_down {
+        i {
+          transform: rotateY(3.142rad);
+        }
       }
     }
   }

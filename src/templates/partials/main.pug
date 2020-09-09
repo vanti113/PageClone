@@ -1,10 +1,17 @@
-main
-  .movie_box
-    .movie_box_title
-      .movie_left
-        span 56. the vanishing (1988)
-      .movie_right
-        span Directed by
-        George George Sluizer
-  .movie_box
-  
+mixin movies
+    .movie_box
+      .movie_box_title
+        .movie_left
+          span 38. hereditary (2018)
+        .movie_right
+          span Directed by
+          George Ari Aster
+      .movie_image  
+          img(src="image/poster.png", alt="movie images")  
+      .movie_prefer    
+          span  Do you agree?
+          .prefer_up
+            i(class="fas fa-thumbs-up") 
+          .prefer_down  
+            i(class="fas fa-thumbs-down")
+            
